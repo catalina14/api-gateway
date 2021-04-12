@@ -14,8 +14,7 @@ const resolvers = {
 		createUser: (_, { user }) =>
 			generalRequest(`${URL}/${createUser}`, 'POST', user),
 		deleteUser: (_, id) => {
-			const ide = JSON.stringify(id.userId).slice(-1,-1)
-			generalRequest(`${URL}/${ide}`, 'DELETE')
+			generalRequest(`${URL}/${id.userId}`, 'DELETE')
 		}
 	}
 };
