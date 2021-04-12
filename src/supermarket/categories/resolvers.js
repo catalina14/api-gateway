@@ -7,8 +7,8 @@ const resolvers = {
 	Query: {
 		allUsers: (_) =>
 			getRequest(URL, ''),
-		userById: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'GET'),
+		userById: (_,  id ) =>
+			generalRequest(`${URL}/${id.userId}`, 'GET'),
 	},
 	Mutation: {
 		createUser: (_, { user }) =>
