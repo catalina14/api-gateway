@@ -13,6 +13,8 @@ const resolvers = {
 	Mutation: {
 		createUser: (_, { user }) =>
 			generalRequest(`${URL}/${createUser}`, 'POST', user),
+		deleteUser: (_, { id }) =>
+			generalRequest(`${URL}/${id}`, 'DELETE')
 	}
 };
 
