@@ -24,7 +24,9 @@ export async function generalRequest(url, method, body, fullResponse) {
 	}
 
 	try {
-		return await request(parameters);
+		const ide = await request(parameters);
+		console.log("retorno: "+ide)
+		return ide;
 	} catch (err) {
 		return err;
 	}
