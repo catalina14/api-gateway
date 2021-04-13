@@ -22,4 +22,5 @@ export const categoryQueries = `
 export const categoryMutations = `
     createUser(user: UserInput!): User!
     deleteUser(userId: String!): User!
+    updateUser(user: UserInput!): User!
 `;
