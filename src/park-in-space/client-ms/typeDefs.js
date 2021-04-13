@@ -1,4 +1,4 @@
-export const categoryTypeDef = `
+export const clientTypeDef = `
   type User {
       userId: String!
       name: String!
@@ -14,12 +14,12 @@ export const categoryTypeDef = `
     phoneNumber: Int!
   }`;
 
-export const categoryQueries = `
+export const clientQueries = `
       allUsers: [User]!
       userById(userId: String!): User!
   `;
 
-export const categoryMutations = `
+export const clientMutations = `
     createUser(user: UserInput!): User!
     deleteUser(userId: String!): User!
     updateUser(user: UserInput!): User!

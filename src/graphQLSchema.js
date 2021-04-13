@@ -5,24 +5,24 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { mergeSchemas } from './utilities';
 
 import {
-	categoryMutations,
-	categoryQueries,
-	categoryTypeDef
-} from './supermarket/categories/typeDefs';
+	clientMutations,
+	clientQueries,
+	clientTypeDef
+} from './park-in-space/client-ms/typeDefs';
 
-import categoryResolvers from './supermarket/categories/resolvers';
+import clientResolvers from './park-in-space/client-ms/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		categoryTypeDef
+		clientTypeDef
 	],
 	[
-		categoryQueries
+		clientQueries
 	],
 	[
-		categoryMutations
+		clientMutations
 	]
 );
 
@@ -31,6 +31,6 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		categoryResolvers
+		clientResolvers
 	)
 });
