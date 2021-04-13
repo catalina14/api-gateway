@@ -1,6 +1,6 @@
 import { generalRequest, getRequest } from '../../utilities';
 import { url, port, entryPoint, createUser } from './server';
-import {getUserById, getAllUsers, postCreateUser, deleteDeleteUser, putUpdateUser} from './peticiones';
+import {getUserById, getAllUsers, postCreateUser, deleteDeleteUser, putUpdateUser, deleteDeleteAllUsers} from './peticiones';
 
 const URL = `http://${url}:${port}/${entryPoint}`;
 
@@ -25,6 +25,10 @@ const resolvers = {
 		},
 		updateUser: (_, { user }) => {
 			let response = putUpdateUser(`${URL}/${user.userId}`, user);
+			return response;
+		},
+		deleteAllUsers: (_) => {
+			let response = deleteDeleteAllUsers(URL);
 			return response;
 		}
 
