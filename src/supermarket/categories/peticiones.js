@@ -10,17 +10,17 @@ export async function getAllUsers(url_auth_ms) {
 	return response.data
 }
 
-export async function createUser(url_auth_ms, user) {
+export async function postCreateUser(url_auth_ms, user) {
 	let response = await axios.post(url_auth_ms, user)
 	return response.data
 }
 
-export async function deleteUser(url_auth_ms) {
+export async function deleteDeleteUser(url_auth_ms) {
 	let response = await axios.delete(url_auth_ms)
 	return response.data
 }
 
-export async function updateUser(url_auth_ms, user) {
+export async function putUpdateUser(url_auth_ms, user) {
 	let response = await axios.put(url_auth_ms, user)
 	return response.data
 }
