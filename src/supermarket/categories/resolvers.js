@@ -24,7 +24,7 @@ const resolvers = {
 			return response;
 		},
 		updateUser: (_, { user }) => {
-			let response = putUpdateUser(`${URL}/${createUser}`, user);
+			let response = putUpdateUser(`${URL}/${user.userId}`, user);
 			return response;
 		}
 
