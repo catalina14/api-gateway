@@ -27,5 +27,5 @@ export async function putUpdateUser(url_auth_ms, user) {
 
 export async function deleteDeleteAllUsers(url_auth_ms) {
 	let response = await axios.delete(url_auth_ms)
-	return response.data
+	return response.data.response
 }
